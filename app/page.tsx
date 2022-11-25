@@ -1,9 +1,11 @@
+import Trending from "./Trending";
 import Tweet from "./Tweet";
 
 function Homepage() {
   return (
-    <div className="container mx-auto max-w-4xl my-4">
+    <div className="container mx-auto max-w-6xl my-4 flex">
       <Tweet />
+      <Trending />
     </div>
   );
 }

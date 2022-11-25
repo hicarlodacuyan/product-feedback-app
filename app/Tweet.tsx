@@ -4,8 +4,8 @@ import { HiGlobeAlt } from "react-icons/hi2";
 
 function Tweet() {
   return (
-    <section className="flex flex-col bg-white p-4 rounded-lg drop-shadow gap-4 mx-2">
-      <p className="font-bold">Tweet something</p>
+    <section className="flex flex-1 self-start flex-col bg-white p-4 rounded-lg drop-shadow gap-4 mx-2">
+      <p className="font-bold text-sm">Tweet something</p>
       <hr />
       <div className="flex gap-4">
         <Image
