@@ -10,9 +10,9 @@ export default function RootLayout({
   return (
     <html>
       <head />
-      <body className="flex flex-col h-screen">
+      <body className="flex flex-col bg-gray-100">
         <Header />
-        <main className="flex-1 bg-gray-100">{children}</main>
+        <main>{children}</main>
         <MobileFooter />
       </body>
     </html>
