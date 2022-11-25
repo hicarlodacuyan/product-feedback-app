@@ -1,7 +1,9 @@
+import Tweet from "./Tweet";
+
 function Homepage() {
   return (
-    <div>
-      <h1>Body</h1>
+    <div className="container mx-auto max-w-4xl my-4">
+      <Tweet />
     </div>
   );
 }
