@@ -1,7 +1,19 @@
-import React from "react";
+import SortProfileFeed from "./SortProfileFeed";
+import Feed from "../Feed";
+import ProfileInfo from "./ProfileInfo";
 
 function Profile() {
-  return <div>My Profile</div>;
+  return (
+    <div>
+      <div className="profile-bg pt-20">
+        <ProfileInfo />
+      </div>
+      <div className="flex container mx-auto max-w-5xl">
+        <SortProfileFeed />
+        <Feed />
+      </div>
+    </div>
+  );
 }
 
 export default Profile;
