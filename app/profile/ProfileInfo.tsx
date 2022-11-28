@@ -11,7 +11,7 @@ function ProfileInfo() {
             width={96}
             height={96}
             alt="App logo"
-            className="border border-gray-500 rounded-md self-start"
+            className="border border-gray-500 rounded-md self-start -mt-16 md:mt-0 bg-gray-50"
           />
         </div>
         <div className="flex flex-col md:flex-row flex-1 gap-4 md:gap-0">

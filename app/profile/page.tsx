@@ -5,7 +5,7 @@ import ProfileInfo from "./ProfileInfo";
 function Profile() {
   return (
     <div>
-      <div className="profile-bg pt-20">
+      <div className="profile-bg md:pt-48 pt-36">
         <ProfileInfo />
       </div>
       <div className="flex container mx-auto max-w-5xl">
