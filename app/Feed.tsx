@@ -1,13 +1,14 @@
 import Post from "./Post";
+import { getUsers } from "../lib/prisma/users";
 
-function Feed() {
+async function Feed() {
+  const { users } = await getUsers();
+
   return (
     <main className="flex flex-col gap-4">
-      <Post />
-      <Post />
-      <Post />
-      <Post />
-      <Post />
+      {users?.map((user) => (
+        <Post user={user} />
+      ))}
     </main>
   );
 }

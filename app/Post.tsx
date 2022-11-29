@@ -1,3 +1,4 @@
+// @ts-nocheck
 import Image from "next/image";
 import {
   FaRegCommentAlt,
@@ -8,19 +9,19 @@ import {
 import Reply from "./Reply";
 import Comment from "./Comment";
 
-function Post() {
+function Post({ user }) {
   return (
     <div className="bg-white p-4 rounded-lg drop-shadow flex flex-col gap-4 mx-2">
       <div className="flex justify-center items-center gap-4">
         <Image
-          src="/profile.png"
+          src={user.imageUrl}
           width={40}
           height={40}
           alt="App logo"
           className="border border-gray-500 rounded-md self-start"
         />
         <div className="flex-1">
-          <h2>Mikael Stanley</h2>
+          <h2>{user.name}</h2>
           <p className="text-xs">24 August at 20:43</p>
         </div>
       </div>
