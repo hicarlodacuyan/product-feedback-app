@@ -6,9 +6,9 @@ async function Feed() {
 
   return (
     <main className="flex flex-col gap-4">
-      {users?.map((user) => (
-        <Post user={user} />
-      ))}
+      {users?.map((user) => {
+        return user.tweets.map((tweet) => <Post user={user} tweet={tweet} />);
+      })}
     </main>
   );
 }

@@ -4,7 +4,7 @@ import ProfileInfo from "./ProfileInfo";
 
 function Profile() {
   return (
-    <div>
+    <div className="pb-4">
       <div className="profile-bg md:pt-48 pt-36">
         <ProfileInfo />
       </div>

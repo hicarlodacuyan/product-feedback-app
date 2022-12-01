@@ -1,4 +1,5 @@
 // @ts-nocheck
+"use client";
 import Image from "next/image";
 import {
   FaRegCommentAlt,
@@ -9,7 +10,7 @@ import {
 import Reply from "./Reply";
 import Comment from "./Comment";
 
-function Post({ user }) {
+function Post({ user, tweet }) {
   return (
     <div className="bg-white p-4 rounded-lg drop-shadow flex flex-col gap-4 mx-2">
       <div className="flex justify-center items-center gap-4">
@@ -26,10 +27,7 @@ function Post({ user }) {
         </div>
       </div>
       <div>
-        <p>
-          "We travel, some of us forever, to seek other places, other lives,
-          other souls." -Anais Nin
-        </p>
+        <p>{tweet.body}</p>
       </div>
       <div>
         <Image
@@ -42,7 +40,7 @@ function Post({ user }) {
       </div>
       <div className="flex gap-4 text-xs justify-end">
         <p>449 Comments</p>
-        <p>59k Retweets</p>
+        <p>{tweet.likes} Retweets</p>
         <p>234 Saved</p>
       </div>
       <div className="flex">
