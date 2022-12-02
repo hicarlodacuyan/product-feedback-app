@@ -11,6 +11,8 @@ import Reply from "./Reply";
 import Comment from "./Comment";
 
 function Post({ user, tweet }) {
+  const date = new Date(tweet.createdAt).toLocaleString();
+
   return (
     <div className="bg-white p-4 rounded-lg drop-shadow flex flex-col gap-4 mx-2">
       <div className="flex justify-center items-center gap-4">
@@ -23,20 +25,22 @@ function Post({ user, tweet }) {
         />
         <div className="flex-1">
           <h2>{user.name}</h2>
-          <p className="text-xs">24 August at 20:43</p>
+          <p className="text-xs">{date}</p>
         </div>
       </div>
       <div>
         <p>{tweet.body}</p>
       </div>
       <div>
-        <Image
-          src="https://via.placeholder.com/1000x500.png"
-          width={1000}
-          height={500}
-          alt="App logo"
-          className="border border-gray-500 rounded-md self-start"
-        />
+        {tweet.imageUrl ? (
+          <Image
+            src="https://via.placeholder.com/1000x500.png"
+            width={1000}
+            height={500}
+            alt="App logo"
+            className="border border-gray-500 rounded-md self-start"
+          />
+        ) : null}
       </div>
       <div className="flex gap-4 text-xs justify-end">
         <p>449 Comments</p>
